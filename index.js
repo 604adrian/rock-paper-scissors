@@ -173,40 +173,40 @@ function displayTheOtherStats(playerWeapon) {
 function displayScore(playerScore, computerScore) {
     playerP.textContent = `Player's score: ${playerScore}`;
     computerP.textContent = `Computer's score: ${computerScore}`;
-    healthPlayer.value += (playerScore * 10);
-    healthComputer.value += (computerScore * 10);
+    healthPlayer.value = playerScore * 10;
+    healthComputer.value = computerScore * 10;
 }
 
 
 function scoreBoard(result) {
   // score
   if (result === "It's a tie!") {
-    displayScore(playerScore, computerScore);
-    console.log(playerScore, computerScore);
     playerScore++;
     computerScore++;
+    displayScore(playerScore, computerScore);
   } else if (result === "You win!") {
     playerScore++;
     displayScore(playerScore, computerScore);
-    console.log(playerScore, computerScore);
   } else {
     computerScore++;
     displayScore(playerScore, computerScore);
-    console.log(playerScore, computerScore);
   }
   
   // rounds
   if (playerScore !== 5 && computerScore !== 5) {
     return
   } else if (playerScore === 5 && computerScore === 5) {
+    displayScore(playerScore, computerScore);
     window.alert(`It's a tie.\nYou: ${playerScore}\nComputer: ${computerScore}`);
     resetGame(0, 0, "❓", "❓"); 
     return
   } else if (playerScore === 5 && computerScore !== 5) {
+    displayScore(playerScore, computerScore);
     window.alert(`You win.\nYou: ${playerScore}\nComputer: ${computerScore}`);
     resetGame(0, 0, "❓", "❓");
     return
   } else if (playerScore !== 5 && computerScore === 5) {
+    displayScore(playerScore, computerScore);
     window.alert(`You lose.\nYou: ${playerScore}\nComputer: ${computerScore}`);
     resetGame(0, 0, "❓", "❓");
     return
