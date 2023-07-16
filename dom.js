@@ -30,7 +30,6 @@ const playRound = document.querySelector('#playRound');
 playRound.style.display = "flex";
 playRound.style["align-items"] = "center";
 playRound.style["justify-content"] = "center";
-playRound.style.margin = "10px";
-playRound.style["margin-top"] = "30px";
+playRound.style.margin = "25px";
 
 
