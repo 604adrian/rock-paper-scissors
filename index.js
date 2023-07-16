@@ -170,8 +170,6 @@ function displayTheOtherStats(playerWeapon) {
 }
 
 
-
-
 function displayScore(playerScore, computerScore) {
     playerP.textContent = `Player's score: ${playerScore}`;
     computerP.textContent = `Computer's score: ${computerScore}`;

@@ -25,7 +25,7 @@ paper.style.margin = "10px";
 const scissors = document.querySelector('#scissors');
 scissors.style.margin = "10px";
 
-// style for the 'PLAY ROUND' button
+// style for the title
 const playRound = document.querySelector('#playRound');
 playRound.style.display = "flex";
 playRound.style["align-items"] = "center";
