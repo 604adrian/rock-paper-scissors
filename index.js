@@ -183,6 +183,8 @@ function scoreBoard(result) {
   if (result === "It's a tie!") {
     displayScore(playerScore, computerScore);
     console.log(playerScore, computerScore);
+    playerScore++;
+    computerScore++;
   } else if (result === "You win!") {
     playerScore++;
     displayScore(playerScore, computerScore);
